@@ -23,10 +23,10 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/personajes" element={<h1>personajes</h1>} />
-						<Route path="/planetas" element={<h1>planetas</h1>} />
-						<Route path="detalle/personaje/:id" element={<h1>personajes detalle</h1>} />
-						<Route path="detalle/planeta/:id" element={<h1>planetas detalle</h1>} />
+						<Route path="/characters" element={<h1>Characters</h1>} />
+						<Route path="/planets" element={<h1>Planets</h1>} />
+						<Route path="detalle/character/:id" element={<h1>characters details</h1>} />
+						<Route path="detalle/planet/:id" element={<h1>planets details</h1>} />
 
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
