@@ -6,13 +6,12 @@ export const Longcard = (props) => {
     <div className="card">
       <div className="card-header"></div>
       <div className="card-body">
-        <h5 className="card-title"> Special title treatment </h5>
-        <p className="card-text">
-          With supporting text below as a natural lead - in to additional
-          content.
-        </p>
+        <h5 className="card-title"> {props.titulo1} </h5>
+        <div className="card-img">
+        <img src={props.img} style={{"width":"500px","height":"350px"}} />
+        </div>
         <Link to={props.ruta}>
-          <a className="btn btn-primary"> {props.titulo} </a>
+          <a className="btn btn-primary my-3"> {props.titulo} </a>
         </Link>
       </div>
     </div>

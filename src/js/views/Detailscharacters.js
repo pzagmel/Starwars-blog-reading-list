@@ -6,7 +6,7 @@ export const Detailscharacters = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <img src="https://www.famousbollywood.com/wp-content/uploads/2021/05/Best-Planets-to-Live-on-in-Star-Wars.jpg" width={500} />
+            <img src="http://cdn.shopify.com/s/files/1/0190/5436/2724/articles/star_wars_personajes_1024x1024.jpg?v=1616087475" width={700} />
           </div>
           <div className="col">"Aqui va la descripcion."</div>
         </div>
