@@ -18,13 +18,16 @@ export const Longcard = (props) => {
   );
 };
 
-export const Card = ({ titulo, ruta, descripcion }) => {
+export const Card = ({ titulo, ruta, name, gender, haircolor, eyecolor }) => {
   return (
     <div className="card" style={{width: "18rem"}}>
       <img src= "https://dlprivateserver.com/wp-content/uploads/2022/08/%C2%BFTerminara-alguna-vez-Star-Wars.jpg" className="card-img-top" alt="..." />
       <div className="card-body"> 
         <h5 className="card-title">{titulo}</h5>
-        <p className="card-text">{descripcion}</p>
+        <p className="card-text">Name:{name}</p>
+        <p className="card-text">Gender:{gender}</p>
+        <p className="card-text">Hair Color:{haircolor}</p>
+        <p className="card-text">Eye Color:{eyecolor}</p>
         <div className="row">
           <div className="col-8">
         <Link to={ruta}>
