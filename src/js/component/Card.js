@@ -18,7 +18,7 @@ export const Longcard = (props) => {
   );
 };
 
-export const Card = ({ titulo, ruta, name, gender, haircolor, eyecolor }) => {
+export const Card = ({ titulo, ruta, name, gender, haircolor, eyecolor, population, terrain }) => {
   return (
     <div className="card" style={{width: "18rem"}}>
       <img src= "https://dlprivateserver.com/wp-content/uploads/2022/08/%C2%BFTerminara-alguna-vez-Star-Wars.jpg" className="card-img-top" alt="..." />
@@ -28,6 +28,9 @@ export const Card = ({ titulo, ruta, name, gender, haircolor, eyecolor }) => {
         <p className="card-text">Gender:{gender}</p>
         <p className="card-text">Hair Color:{haircolor}</p>
         <p className="card-text">Eye Color:{eyecolor}</p>
+        <p className="card-text">Population:{population}</p>
+        <p className="card-text">Terrain:{terrain}</p>
+
         <div className="row">
           <div className="col-8">
         <Link to={ruta}>

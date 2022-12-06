@@ -12,8 +12,10 @@ export const Detailsplanet = () => {
         </div>
       </div>
       <table>
-       population
-       terrain 
+       Name
+       Climate
+       PopulationOrbit Period
+       Rotation PeriodDiameter
       </table>
     </>
   );

@@ -13,7 +13,10 @@ export const Detailscharacters = () => {
       </div>
       <table>
        Name
+       Birth Year
        Gender
+       Height
+       Skin Color
        Hair Color
        Eye Color
         
