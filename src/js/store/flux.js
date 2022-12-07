@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			planets:[],
 			characters:[],
-			url:[],
+			
 			demo: [
 				{
 					title: "FIRST",
@@ -18,11 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			getUrl:()=>{
-				fetch("https://www.swapi.tech/api/people")
-				.then(response=>response.json())
-				.then(data => setStore ({url:data.results}) 				 
-			)},
+			
 			getCharacters:()=>{
 				fetch("https://www.swapi.tech/api/people")
 				.then(response=>response.json())
