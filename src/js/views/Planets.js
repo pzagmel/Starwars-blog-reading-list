@@ -4,13 +4,13 @@ import { Context } from "../store/appContext";
 
 export const Planets = () => {
 
-const {store} = useContext(Context);
+const {store, actions} = useContext(Context);
 
     return <div className="container">
         <h2>Planets</h2>
         <div className="row">
            {store.planets.map((elm, index)=>{
-            return <Card titulo={elm.name}/>
+            return <Card title={elm.name} route={"/detail/planet/" + elm.uid}/>
            })}
         </div>
     </div>

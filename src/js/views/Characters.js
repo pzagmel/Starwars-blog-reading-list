@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Card } from "../component/Card";
-
+import { Context } from "../store/appContext";
 
 export const Characters = () => {
+    
+const {store, actions} = useContext(Context);   
+    
     return <div className="container">
         <h2>Characters</h2>
-        <div className="row g-1">
-            <Card/> <Card/> <Card/> <Card/> <Card/> <Card/> <Card/> <Card/>
+        <div className="row">
+        {store.characters.map((elm, index)=>{
+            return <Card title={elm.name}  route={"/detail/character/" + elm.uid}/>
+           })}
         </div>
+    </div>       
+}          
 
-    </div>
-        
-}
-//<div className="card" style={{width: "18rem"}}>

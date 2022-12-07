@@ -6,34 +6,28 @@ export const Longcard = (props) => {
     <div className="card">
       <div className="card-header"></div>
       <div className="card-body">
-        <h5 className="card-title"> {props.titulo1} </h5>
+        <h5 className="card-title"> {props.title1} </h5>
         <div className="card-img">
         <img src={props.img} style={{"width":"500px","height":"350px"}} />
         </div>
-        <Link to={props.ruta}>
-          <a className="btn btn-primary my-3"> {props.titulo} </a>
+        <Link to={props.route}>
+          <a className="btn btn-primary my-3"> {props.title} </a>
         </Link>
       </div>
     </div>
   );
 };
 
-export const Card = ({ titulo, ruta, name, gender, haircolor, eyecolor, population, terrain }) => {
+export const Card = ({ title, route, description }) => {
   return (
     <div className="card" style={{width: "18rem"}}>
       <img src= "https://dlprivateserver.com/wp-content/uploads/2022/08/%C2%BFTerminara-alguna-vez-Star-Wars.jpg" className="card-img-top" alt="..." />
       <div className="card-body"> 
-        <h5 className="card-title">{titulo}</h5>
-        <p className="card-text">Name:{name}</p>
-        <p className="card-text">Gender:{gender}</p>
-        <p className="card-text">Hair Color:{haircolor}</p>
-        <p className="card-text">Eye Color:{eyecolor}</p>
-        <p className="card-text">Population:{population}</p>
-        <p className="card-text">Terrain:{terrain}</p>
-
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
         <div className="row">
           <div className="col-8">
-        <Link to={ruta}>
+        <Link to={route}>
           <a className="btn btn-outline-primary"> More details!</a>
           </Link>
           </div>
