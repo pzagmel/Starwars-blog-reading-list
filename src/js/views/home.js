@@ -5,7 +5,7 @@ import { Longcard } from "../component/Card";
 
 export const Home = () => (
 	<div className="text-center mt-5">
-		<h1>StarWars Blog!</h1>
+		<h1>StarWars Blog</h1>
 		<div className ="row">
 			<div className="col">
 			<Longcard title="Go to Characters" title1="Characters" img="http://cdn.shopify.com/s/files/1/0190/5436/2724/articles/star_wars_personajes_1024x1024.jpg?v=1616087475"  route="/Characters" /> 
