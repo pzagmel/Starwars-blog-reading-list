@@ -28,8 +28,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             getPlanets:()=>{
                fetch("https://www.swapi.tech/api/planets")
 			   .then(response=>response.json())
-			   .then(data=>{			
-				setStore({planets:data.results}) 
+			   .then(data=>{ setStore({planets:data.results}) 
 			   })
 			},
 		

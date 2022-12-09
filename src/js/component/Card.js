@@ -32,10 +32,12 @@ export const Card = ({ title, route, description }) => {
           </Link>
           </div>
           <div className="col-4">
-          <button className="btn btn-outline-warning">❤️</button>
+          <button className="btn btn-outline-warning">❤️</button>   
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+//aqui hook useState para agregar a favoritos
