@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 export const Characters = () => {
     
-const {store, actions} = useContext(Context);   
+const {store} = useContext(Context);   
     
     return <div className="container">
         <h2>Characters</h2>
