@@ -3,8 +3,13 @@
 */
 body{
     font-family: "Star Wars", fantasy;
+    font-size: 20px;
 }
 
-h2{
+h2, th, td{
     color:red;
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
 }

@@ -31,7 +31,7 @@ export const Detailscharacter = () => {
           </div>
         </div>
       </div>
-      <table className="table my-5">
+      <table className="table my-5 lg">
         <thead>
           <tr>
             <th scope="col">Heigh</th>

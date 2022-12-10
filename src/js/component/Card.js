@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Longcard = (props) => {
   return (
     <div className="card">
-      <div className="card-header"></div>
+     
       <div className="card-body">
         <h5 className="card-title"> {props.title1} </h5>
         <div className="card-img">
@@ -17,7 +17,6 @@ export const Longcard = (props) => {
     </div>
   );
 };
-
 export const Card = ({ title, route, description }) => {
   return (
     <div className="card" style={{width: "18rem"}}>
@@ -32,7 +31,11 @@ export const Card = ({ title, route, description }) => {
           </Link>
           </div>
           <div className="col-4">
-          <button className="btn btn-outline-warning">❤️</button>   
+          <button className="btn btn-outline-warning" 
+          //onClick={() =>
+          //        }
+               
+               >❤️</button>   
           </div>
         </div>
       </div>
