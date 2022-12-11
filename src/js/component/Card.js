@@ -31,10 +31,7 @@ export const Card = ({ title, route, description }) => {
           </Link>
           </div>
           <div className="col-4">
-          <button className="btn btn-outline-warning" 
-          //onClick={() =>
-          //        }
-               
+          <button className="btn btn-outline-warning"       
                >❤️</button>   
           </div>
         </div>
@@ -43,4 +40,3 @@ export const Card = ({ title, route, description }) => {
   );
 };
 
-//aqui hook useState para agregar a favoritos
