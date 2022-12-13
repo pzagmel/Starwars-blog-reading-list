@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt } from "react-icons/fa";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
+
   return (
     <nav className="navbar navbar-light bg-light mb-3">
       <Link to="/">
@@ -21,9 +24,14 @@ export const Navbar = () => {
           Favorites
         </button>
         <ul className="dropdown-menu">
-		<li className="dropdown-item">personaje1 <FaTrashAlt/></li>
-		<li className="dropdown-item">personaje2 <FaTrashAlt/></li>
-		</ul>
+          {store.favorites.map((value, index) => {
+            return (
+              <li key={index} className="dropdown-item">
+                {value} <FaTrashAlt />
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );

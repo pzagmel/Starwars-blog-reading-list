@@ -1,5 +1,6 @@
-import React from "react";
+import React,{ useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Longcard = (props) => {
   return (
@@ -18,6 +19,8 @@ export const Longcard = (props) => {
   );
 };
 export const Card = ({ title, route, description }) => {
+   const {actions} = useContext(Context)
+
   return (
     <div className="card" style={{width: "18rem"}}>
       <img src= "https://dlprivateserver.com/wp-content/uploads/2022/08/%C2%BFTerminara-alguna-vez-Star-Wars.jpg" className="card-img-top" alt="..." />
@@ -31,8 +34,9 @@ export const Card = ({ title, route, description }) => {
           </Link>
           </div>
           <div className="col-4">
-          <button className="btn btn-outline-warning"       
-               >❤️</button>   
+          <button className="btn btn-outline-warning" onClick={()=>{
+          actions.addFav(title)
+          }}>❤️</button>   
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			planets:[],
 			characters:[],
-			
+			favorites:[],
 			demo: [
 				{
 					title: "FIRST",
@@ -17,8 +17,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			]
 		},
-		actions: {
-			
+		actions: {		
+			addFav:(name)=>{
+				console.log("elemento será agregado a fav", name)
+				setStore({favorites:[name]})
+			},	
 			getCharacters:()=>{
 				fetch("https://www.swapi.tech/api/people")
 				.then(response=>response.json())
