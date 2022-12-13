@@ -34,9 +34,9 @@ export const Navbar = () => {
               <li key={index} className="dropdown-item">
                 {value} <FaTrashAlt 
                 
-                onClick={()=>{
-                  actions.deleteFav(title)
-                  }} 
+                //onClick={()=>{
+                  //actions.deleteFav(title)
+                  //}} 
                 
                 //onClick={() =>
                 //setFavorites(favorites.filter((value, i) => index != i))
