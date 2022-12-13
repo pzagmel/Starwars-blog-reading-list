@@ -25,9 +25,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},	
 			//deleteFav:(name)=>{
 			//	const store = getStore();
-				//console.log("elemento será agregado a fav", name)
-			//	setStore({favorites:[store.favorites,name]})
+			//	setStore({favorites.filter:[store.favorites,name]})
 			//},	
+			// favorites.filter((value, i) => index != i))
+			
 			getCharacters:()=>{
 				fetch("https://www.swapi.tech/api/people")
 				.then(response=>response.json())
