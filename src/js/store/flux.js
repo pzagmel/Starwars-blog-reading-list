@@ -19,8 +19,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {		
 			addFav:(name)=>{
+				const store = getStore();
 				console.log("elemento será agregado a fav", name)
-				setStore({favorites:[name]})
+				setStore({favorites:[...store.favorites,name]})
 			},	
 			getCharacters:()=>{
 				fetch("https://www.swapi.tech/api/people")
