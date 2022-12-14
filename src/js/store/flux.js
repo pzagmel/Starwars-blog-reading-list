@@ -23,9 +23,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//console.log("elemento será agregado a fav", name)
 				setStore({favorites:[...store.favorites,name]})
 			},	
-			deleteFav:()=>{
+			deleteFav:(index)=>{
 			const store = getStore();
-			setStore({favorites:[store.filter((value, i) => index != i)]});
+			setStore({favorites:[store.favorites.filter((e,i) => index != i)]});
 			},	
 			// favorites.filter((value, i) => index != i))
 			

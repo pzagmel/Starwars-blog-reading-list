@@ -32,7 +32,7 @@ export const Navbar = () => {
                 {value} <FaTrashAlt 
                 
                 onClick={()=>{
-                actions.deleteFav()
+                actions.deleteFav(index)
                 }} 
                 
                
