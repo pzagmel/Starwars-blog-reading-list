@@ -21,7 +21,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addFav:(name,id)=>{
 				const store = getStore();
 				//console.log("elemento será agregado a fav", name)
+				// filtro si elemento ya está en fav, y solo agrega si es que no lo encuentra
+				// .length para ver cantidad de coincidencias de elementos encontrados
+				//0=false n=true - ! lo niega 
+				if(!store.favorites.filter((fav) => fav.id === id).length){
 				setStore({favorites:[...store.favorites,{name, id}]})
+				}
 			},	
 			deleteFav:(index)=>{
 			const store = getStore();
