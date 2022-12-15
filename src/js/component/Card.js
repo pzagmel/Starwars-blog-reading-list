@@ -18,7 +18,7 @@ export const Longcard = (props) => {
     </div>
   );
 };
-export const Card = ({ title, route, description }) => {
+export const Card = ({ title, route, description, id }) => {
    const {actions} = useContext(Context)
 
   return (
@@ -35,7 +35,7 @@ export const Card = ({ title, route, description }) => {
           </div>
           <div className="col-4">
           <button className="btn btn-outline-warning" onClick={()=>{
-          actions.addFav(title)
+          actions.addFav(title, id)
           }}>❤️</button>   
           </div>
         </div>

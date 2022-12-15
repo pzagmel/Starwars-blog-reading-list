@@ -18,14 +18,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {		
-			addFav:(name)=>{
+			addFav:(name,id)=>{
 				const store = getStore();
 				//console.log("elemento será agregado a fav", name)
-				setStore({favorites:[...store.favorites,name]})
+				setStore({favorites:[...store.favorites,{name, id}]})
 			},	
 			deleteFav:(index)=>{
 			const store = getStore();
-			setStore({favorites:[store.favorites.filter((e,i) => index != i)]});
+			setStore({favorites:[...store.favorites.filter((fav) => fav.id !== index)]});
 			},	
 			// favorites.filter((value, i) => index != i))
 			

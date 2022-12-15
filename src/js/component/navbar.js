@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
 import { Context } from "../store/appContext";
 
-
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
-  
 
   return (
     <nav className="navbar navbar-light bg-light mb-3">
@@ -26,17 +24,16 @@ export const Navbar = () => {
           Favorites
         </button>
         <ul className="dropdown-menu">
+          {console.log(store.favorites)}
           {store.favorites.map((value, index) => {
             return (
               <li key={index} className="dropdown-item">
-                {value} <FaTrashAlt 
-                
-                onClick={()=>{
-                actions.deleteFav(index)
-                }} 
-                
-               
-                /> 
+                {value.name}
+                <FaTrashAlt
+                  onClick={() => {
+                    actions.deleteFav(value.id);
+                  }}
+                />
               </li>
             );
           })}

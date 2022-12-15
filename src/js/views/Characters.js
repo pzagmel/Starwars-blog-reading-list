@@ -10,7 +10,7 @@ const {store} = useContext(Context);
         <h2>Characters</h2>
         <div className="row">
         {store.characters.map((elm, index)=>{
-            return <Card title={elm.name}  route={"/detail/character/" + elm.uid}/>
+            return <Card title={elm.name} id={elm.uid} route={"/detail/character/" + elm.uid}/>
            })}
         </div>
     </div>       
